@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="620.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barkadista.AdminReports">
+   <children>
+      <AnchorPane fx:id="anchorMain" onMouseDragged="#windowDrag" onMousePressed="#windowPress" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane id="top_bar_pane" prefHeight="66.0" prefWidth="1080.0" style="-fx-background-color: #FAC213;">
+               <children>
+                  <Label layoutX="69.0" layoutY="10.0" prefHeight="46.0" prefWidth="823.0" text="National University Computer Laboratory Monitoring System" textAlignment="CENTER" textFill="#203864" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="89.0" fitWidth="68.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@nulogo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <TabPane layoutY="153.0" prefHeight="462.0" prefWidth="1051.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <tabs>
+                <Tab text="Reports">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="table_Report" fixedCellSize="0.0" layoutX="25.0" layoutY="14.0" prefHeight="200.0" prefWidth="525.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="col_Roomnum" prefWidth="115.99999696016312" text="Room Number" />
+                                  <TableColumn fx:id="col_Pcnum" prefWidth="126.39999389648438" text="Computer Number" />
+                                    <TableColumn fx:id="col_Reportnum" prefWidth="124.00001525878906" text="Report Number" />
+                                    <TableColumn fx:id="col_Content" prefWidth="219.99996948242188" text="Content" />
+                                    <TableColumn fx:id="col_comment" prefWidth="249.60003662109375" text="Comment" />
+                                    <TableColumn fx:id="col_Submittee" prefWidth="131.199951171875" text="Submittee" />
+                                    <TableColumn fx:id="col_Date" minWidth="0.0" prefWidth="86.40008544921875" text="Date" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Archived">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="table_Archived" prefHeight="200.0" prefWidth="525.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TableColumn fx:id="archcol_Roomnum" prefWidth="115.99999696016312" text="Room Number" />
+                                    <TableColumn fx:id="archcol_Pcnum" prefWidth="126.39999389648438" text="Computer Number" />
+                                    <TableColumn fx:id="archcol_Reportnum" prefWidth="124.00001525878906" text="Report Number" />
+                                    <TableColumn fx:id="archcol_Content" prefWidth="207.19992065429688" text="Content (Archived)" />
+                                    <TableColumn fx:id="archcol_comment" prefWidth="256.00006103515625" text="Comment" />
+                                    <TableColumn fx:id="archcol_Submittee" prefWidth="136.800048828125" text="Submittee" />
+                                    <TableColumn fx:id="archcol_Date" prefWidth="92.80010986328125" text="Date" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <AnchorPane fx:id="Dashboard" layoutX="360.0" layoutY="75.0" onMouseClicked="#proceedDashboard" prefHeight="54.0" prefWidth="360.0" style="-fx-border-color: #D9D9D9; -fx-background-color: white; -fx-border-width: 0 1 1 1;">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefWidth="183.0" text="Dashboard" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="RoomSelection" layoutX="229.0" layoutY="75.0" onMouseClicked="#proceedRoomSelection" prefHeight="54.0" prefWidth="360.0" style="-fx-border-color: #D9D9D9; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefWidth="183.0" text="Room Selection" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ReportsManager" layoutX="630.0" layoutY="75.0" onMouseClicked="#proceedReportsManager" prefHeight="54.0" prefWidth="360.0" style="-fx-border-color: #D9D9D9; -fx-background-color: #524e45; -fx-border-width: 0 0 1 0;" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefWidth="183.0" text="Reports Manager" textFill="#f2f4f7" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="shutdown_img" fitHeight="30.0" fitWidth="60.0" layoutX="1024.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@shutdown.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="home_img" fitHeight="30.0" fitWidth="53.0" layoutX="975.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+               <image>
+                  <Image url="@homeicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

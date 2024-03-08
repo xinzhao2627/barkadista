@@ -1,0 +1,13 @@
+
+
+
+/* ROOM SELECTION FRAME */
+.menu-button .arrow-button {
+    -fx-padding: 0;
+}
+.menu-button .arrow {
+    -fx-background-color: transparent;
+}
+.chart-bar {
+    -fx-bar-fill: red;
+}

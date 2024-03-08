@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="StackRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barkadista.StudentRoomSelection">
+    <children>
+        <AnchorPane fx:id="anchorMain" onMouseDragged="#windowDrag" onMousePressed="#windowPress" prefHeight="620.0" prefWidth="1080.0" style="-fx-background-color: #F2F2F2;">
+            <children>
+            <AnchorPane id="top_bar_pane" prefHeight="66.0" prefWidth="1080.0" style="-fx-background-color: #FAC213;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="69.0" layoutY="10.0" prefHeight="46.0" prefWidth="823.0" text="National University Computer Laboratory Monitoring System" textAlignment="CENTER" textFill="#203864" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="89.0" fitWidth="68.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="1007.2" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@nulogo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="shutdown_img" fitHeight="30.0" fitWidth="60.0" layoutX="897.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@shutdown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="home_img" fitHeight="30.0" fitWidth="53.0" layoutX="867.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@homeicon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label fx:id="room_label" alignment="CENTER" layoutX="464.0" layoutY="96.0" prefHeight="42.0" prefWidth="151.0" AnchorPane.bottomAnchor="10.0">
+               <font>
+                  <Font name="Corbel Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPrev" layoutX="30.0" layoutY="259.0" mnemonicParsing="false" onAction="#back" prefHeight="138.0" prefWidth="68.0" style="-fx-background-color: #203864;" text="&lt;" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="30.0">
+               <effect>
+                  <DropShadow height="9.0" offsetX="4.0" offsetY="3.0" radius="4.0" width="9.0">
+                     <color>
+                        <Color red="0.75789475440979" green="0.7157894968986511" blue="0.7157894968986511" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNext" layoutX="976.0" layoutY="259.0" mnemonicParsing="false" onAction="#next" prefHeight="138.0" prefWidth="68.0" style="-fx-background-color: #203864;" text="&gt;" textFill="WHITE" wrapText="true" AnchorPane.rightAnchor="30.0">
+               <effect>
+                  <DropShadow height="9.0" offsetX="-4.0" offsetY="3.0" radius="4.0" width="9.0">
+                     <color>
+                        <Color red="0.75789475440979" green="0.7157894968986511" blue="0.7157894968986511" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <AnchorPane id="room cr" fx:id="comp_settings_pane" layoutX="275.0" layoutY="179.0" prefHeight="298.0" prefWidth="526.0" style="-fx-background-color: white; -fx-border-color: #D0CECE;" visible="false">
+               <children>
+                  <Label fx:id="comp_settings_label" alignment="CENTER" layoutX="2.0" layoutY="14.0" prefHeight="18.0" prefWidth="54.0" text="Computer Overview" textAlignment="CENTER" textFill="#203864" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="comp_report_Btn" layoutX="101.6" layoutY="98.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="158.0" style="-fx-background-color: #dd7973; -fx-background-radius: 5;" text="Report" textFill="WHITE" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="12.0" />
+                     </font></Button>
+                  <Label fx:id="setting_comp_ID_lb" alignment="CENTER" layoutX="297.0" layoutY="62.0" prefHeight="30.0" prefWidth="150.0" text="comp_id" textAlignment="CENTER" textFill="#a5a6a6" AnchorPane.rightAnchor="79.0">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="comp_close_Btn" fitHeight="29.0" fitWidth="26.0" layoutX="372.8" layoutY="15.8" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                     <image>
+                        <Image url="@close_btn.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="setting_comp_Status_lb" alignment="CENTER" layoutX="298.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" text="status" textAlignment="CENTER" textFill="#a5a6a6" AnchorPane.rightAnchor="78.0">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="setting_comp_component_cb" layoutX="41.0" layoutY="178.0" prefWidth="150.0" AnchorPane.leftAnchor="70.0" />
+                  <Label fx:id="setting_comp_component_word" alignment="CENTER" layoutX="304.0" layoutY="175.0" prefHeight="30.0" prefWidth="138.0" text="severity" textAlignment="CENTER" textFill="#a5a6a6" AnchorPane.rightAnchor="84.0">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb2" alignment="CENTER_RIGHT" layoutX="71.39999999999999" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" text="Computer Status:" textAlignment="CENTER" textFill="#a5a6a6">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb1" alignment="CENTER_RIGHT" layoutX="72.6" layoutY="62.0" prefHeight="30.0" prefWidth="150.0" text="Computer ID:" textAlignment="CENTER" textFill="#a5a6a6">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lb3" alignment="CENTER_RIGHT" layoutX="21.0" layoutY="133.0" prefHeight="30.0" prefWidth="170.0" text="Computer Condition:" textAlignment="CENTER" textFill="#a5a6a6" AnchorPane.leftAnchor="51.0">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="setting_comp_Condition_lb" alignment="CENTER" layoutX="260.0" layoutY="134.0" prefHeight="30.0" prefWidth="230.0" text="condition" textAlignment="CENTER" textFill="#a5a6a6" AnchorPane.rightAnchor="37.0">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="report_prompt" layoutX="213.0" layoutY="165.0" prefHeight="398.0" prefWidth="650.0" style="-fx-border-color: black; -fx-background-color: white; -fx-background-radius: 15; -fx-border-radius: 15;" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="249.0" layoutY="14.0" prefHeight="46.0" prefWidth="246.0" style="-fx-background-color: #dd7973; -fx-background-radius: 5;" text="Report Issue" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="32.0" layoutY="104.0" prefHeight="22.0" prefWidth="118.0" text="Computer ID" textAlignment="RIGHT" AnchorPane.leftAnchor="32.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="report_pcID_TF" alignment="CENTER" disable="true" layoutX="32.0" layoutY="77.0" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.leftAnchor="32.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="193.0" layoutY="104.0" prefHeight="22.0" prefWidth="118.0" text="Room Number" textAlignment="RIGHT" AnchorPane.leftAnchor="180.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="report_pcRoom_TF" alignment="CENTER" disable="true" layoutX="193.0" layoutY="77.0" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.leftAnchor="180.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="348.0" layoutY="104.0" prefHeight="22.0" prefWidth="118.0" text="Date" textAlignment="RIGHT" AnchorPane.rightAnchor="180.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="report_pcDate_TF" alignment="CENTER" disable="true" layoutX="348.0" layoutY="77.0" prefHeight="27.0" prefWidth="118.0" promptText="mm-dd-yyyy" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.rightAnchor="180.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="479.0" layoutY="102.0" prefHeight="22.0" prefWidth="118.0" text="User ID" textAlignment="RIGHT" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="report_pcUser_TF" alignment="CENTER" disable="true" layoutX="479.0" layoutY="75.0" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.rightAnchor="30.0">
+                     <font>
+                        <Font name="Corbel Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label alignment="CENTER" layoutX="3.2" layoutY="137.0" prefHeight="46.0" prefWidth="192.0" text="Computer Status" textAlignment="CENTER" AnchorPane.leftAnchor="5.0">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="report_pcActive_rb" layoutX="16.0" layoutY="189.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="79.0" text="Active" textAlignment="CENTER">
+                     <font>
+                        <Font name="Corbel" size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="report_pcInactive_rb" layoutX="103.0" layoutY="189.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="79.0" text="Inactive">
+                     <font>
+                        <Font name="Corbel" size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <Label alignment="CENTER" layoutX="190.0" layoutY="137.0" prefHeight="46.0" prefWidth="292.0" text="Components with Issue" textAlignment="CENTER" AnchorPane.leftAnchor="190.0">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="report_pcParts" layoutX="261.0" layoutY="186.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #524e45; -fx-border-radius: 5;" />
+                  <TextArea fx:id="report_pcContent" layoutX="52.0" layoutY="258.0" prefHeight="92.0" prefWidth="546.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0.5 0.5 0.5 0.5;" AnchorPane.bottomAnchor="48.39999999999998" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="52.0">
+                     <font>
+                        <Font name="Corbel" size="12.0" />
+                     </font>
+                  </TextArea>
+                  <Label alignment="CENTER" layoutX="1.0" layoutY="231.0" prefHeight="26.0" prefWidth="649.0" text="Comments" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Corbel Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="report_submit_btn" layoutX="271.0" layoutY="363.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #ffbd03; -fx-border-radius: 19; -fx-background-radius: 10;" text="Submit" textFill="#203864" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="261.0" AnchorPane.rightAnchor="261.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="12.0" />
+                     </font></Button>
+                  <Label alignment="CENTER" layoutX="432.0" layoutY="137.0" prefHeight="46.0" prefWidth="192.0" text="Severity" textAlignment="CENTER" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="report_pcSeverity" layoutX="454.0" layoutY="186.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5; -fx-border-color: #524e45;" AnchorPane.rightAnchor="35.0" />
+                  <Label alignment="CENTER" layoutX="464.0" layoutY="212.0" prefHeight="19.0" prefWidth="150.0" text="1 to 3 with 3 being the most severe" textAlignment="CENTER" textFill="#9c9999" wrapText="true">
+                     <font>
+                        <Font name="Corbel" size="10.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="report_close_btn" fitHeight="46.0" fitWidth="33.0" layoutX="614.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@close_btn.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

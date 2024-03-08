@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.barkadista.AdminDashboard">
+   <children>
+      <AnchorPane fx:id="anchorMain" onMouseDragged="#windowDrag" onMousePressed="#windowPress" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F2F2;">
+         <children>
+            <AnchorPane id="student_pane" fx:id="red_report" layoutX="25.0" layoutY="140.0" prefHeight="164.0" prefWidth="498.0" style="-fx-background-color: #E43A19; -fx-border-color: #C70039; -fx-border-width: 2.25;" AnchorPane.bottomAnchor="316.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="557.0" AnchorPane.topAnchor="140.0">
+               <effect>
+                  <DropShadow height="9.8" offsetX="4.0" offsetY="3.0" radius="4.29" width="9.36">
+                     <color>
+                        <Color red="0.5686274766921997" green="0.545098066329956" blue="0.545098066329956" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label fx:id="warning_label" alignment="CENTER" layoutY="69.0" prefHeight="42.0" prefWidth="238.0" text="Warning, computer issues found" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="Corbel Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="overall_report_label" alignment="CENTER" layoutX="20.799999999999997" layoutY="64.0" prefHeight="49.0" prefWidth="463.0" text="text" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="symbol_report" fitHeight="68.0" fitWidth="80.0" layoutX="214.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@warning.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="top_bar_pane" prefHeight="66.0" prefWidth="1080.0" style="-fx-background-color: #FAC213;">
+               <children>
+                  <Label layoutX="69.0" layoutY="10.0" prefHeight="46.0" prefWidth="823.0" text="National University Computer Laboratory Monitoring System" textAlignment="CENTER" textFill="#203864" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="89.0" fitWidth="68.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@nulogo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="shutdown_img" fitHeight="30.0" fitWidth="60.0" layoutX="1014.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@shutdown.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="home_img" fitHeight="30.0" fitWidth="53.0" layoutX="965.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@homeicon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="student_pane" layoutX="440.0" layoutY="139.0" prefHeight="452.0" prefWidth="562.0" style="-fx-background-color: white; -fx-border-color: #020205; -fx-border-width: 0.3;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="550.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="140.0">
+               <children>
+                  <AnchorPane id="student_pane" layoutX="1.6" layoutY="3.2" prefHeight="42.0" prefWidth="514.0" style="-fx-background-color: #111F4D;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" layoutY="-6.0" prefHeight="54.0" prefWidth="514.0" text="Computer conditions per room" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0">
+                           <font>
+                              <Font name="Corbel Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <Button fx:id="room_next_btn" layoutX="337.0" layoutY="405.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #111F4D; -fx-border-radius: 0; -fx-background-radius: 0;" text="&gt;" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="11.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <BarChart fx:id="roomGraph" layoutY="50.0" prefHeight="351.0" prefWidth="504.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0">
+                    <xAxis>
+                      <CategoryAxis prefHeight="18.0" prefWidth="456.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis prefHeight="322.0" prefWidth="29.0" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <AnchorPane layoutX="181.0" layoutY="404.8" prefHeight="42.0" prefWidth="152.0" style="-fx-background-color: #E43A19;" AnchorPane.bottomAnchor="12.800000000000011">
+                     <children>
+                        <Label alignment="CENTER" layoutX="9.6" layoutY="9.0" prefHeight="8.0" prefWidth="152.0" text="Reports" textFill="#f2f4f7" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0">
+                           <font>
+                              <Font name="Corbel" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="room_report_label" alignment="TOP_CENTER" layoutX="15.200000000000001" layoutY="5.0" prefHeight="10.0" prefWidth="138.0" textAlignment="CENTER" textFill="#f2f4f7" wrapText="true" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="4.0">
+                           <font>
+                              <Font name="Leelawadee Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="room_prev_btn" layoutX="14.0" layoutY="405.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: #111F4D; -fx-border-radius: 0; -fx-background-radius: 0;" text="&lt;" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="11.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow height="9.58" offsetX="4.0" offsetY="3.0" radius="4.234999999999999" width="9.36">
+                     <color>
+                        <Color red="0.5686274766921997" green="0.545098066329956" blue="0.545098066329956" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </AnchorPane>
+            <AnchorPane fx:id="Dashboard" layoutX="360.0" layoutY="75.0" onMouseClicked="#proceedDashboard" prefHeight="54.0" prefWidth="360.0" style="-fx-border-color: #D9D9D9; -fx-background-color: #524e45; -fx-border-width: 0 1 1 1;">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefWidth="183.0" text="Dashboard" textFill="#f2f4f7" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="RoomSelection" layoutX="14.0" layoutY="75.0" onMouseClicked="#proceedRoomSelection" prefHeight="54.0" prefWidth="360.0" style="-fx-border-color: #D9D9D9; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefWidth="183.0" text="Room Selection" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ReportsManager" layoutX="773.0" layoutY="75.0" onMouseClicked="#proceedReportsManager" prefHeight="54.0" prefWidth="360.0" style="-fx-border-color: #D9D9D9; -fx-border-width: 0 0 1 0;" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="8.0" prefWidth="183.0" text="Reports Manager" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Leelawadee" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="student_pane" layoutX="24.0" layoutY="359.0" prefHeight="289.0" prefWidth="498.0" style="-fx-background-color: #111F4D;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="25.0">
+               <effect>
+                  <DropShadow height="9.8" offsetX="4.0" offsetY="3.0" radius="4.29" width="9.36">
+                     <color>
+                        <Color red="0.5686274766921997" green="0.545098066329956" blue="0.545098066329956" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label alignment="CENTER" layoutX="2.0" layoutY="105.0" prefHeight="42.0" prefWidth="238.0" text="Overall Computer Conditions" textAlignment="CENTER" textFill="#f2f4f7" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="384.0" layoutY="207.0" prefHeight="40.0" prefWidth="120.0" text="Total active computers" textAlignment="CENTER" textFill="#f2f4f7" wrapText="true" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="-7.0" layoutY="211.0" prefHeight="40.0" prefWidth="120.0" text="Total inactive computers" textAlignment="CENTER" textFill="#f2f4f7" wrapText="true" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="Corbel Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="overallChart" clockwise="false" labelLineLength="0.0" labelsVisible="false" layoutX="55.2" layoutY="43.2" legendSide="RIGHT" legendVisible="false" prefHeight="208.0" prefWidth="395.0" style="-fx-border-width: 0;" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="43.0" />
+                  <Label alignment="CENTER" layoutX="37.0" layoutY="80.0" prefHeight="43.0" prefWidth="80.0" text="Good Condition" textAlignment="CENTER" textFill="#50ffb1" wrapText="true" AnchorPane.rightAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="31.0" layoutY="152.0" prefHeight="43.0" prefWidth="80.0" text="Minor issue" textAlignment="CENTER" textFill="#fff200" wrapText="true" AnchorPane.leftAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="382.0" layoutY="82.0" prefHeight="38.0" prefWidth="80.0" text="Major issue" textAlignment="CENTER" textFill="#f4a259" wrapText="true" AnchorPane.leftAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="33.0" layoutY="151.0" prefHeight="38.0" prefWidth="80.0" text="Bad Condition" textAlignment="CENTER" textFill="#ee6055" wrapText="true" AnchorPane.rightAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="overall_active_label" alignment="CENTER" layoutX="31.0" layoutY="62.0" prefHeight="18.0" prefWidth="80.0" textAlignment="CENTER" textFill="#50ffb1" AnchorPane.rightAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="overall_minor_label" alignment="CENTER" layoutX="30.0" layoutY="136.0" prefHeight="14.0" prefWidth="80.0" textFill="#fff200" AnchorPane.leftAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="overall_major_label" alignment="CENTER" layoutX="386.0" layoutY="62.0" prefHeight="20.0" prefWidth="80.0" textAlignment="CENTER" textFill="#f4a259" AnchorPane.leftAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="overall_unusable_label" alignment="CENTER" layoutX="36.8" layoutY="129.0" prefHeight="16.0" prefWidth="80.0" textFill="#ee6055" AnchorPane.rightAnchor="60.0">
+                     <font>
+                        <Font name="Leelawadee Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="inactive_pc_label" alignment="CENTER" layoutX="14.0" layoutY="256.0" prefHeight="22.0" prefWidth="120.0" text="###" textAlignment="CENTER" textFill="#f2f4f7" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="active_pc_label" alignment="CENTER" layoutX="24.0" layoutY="266.0" prefHeight="22.0" prefWidth="120.0" text="###" textAlignment="CENTER" textFill="#f2f4f7" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
