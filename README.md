@@ -14,7 +14,6 @@ within the application.
   - Ikonli 
   - ControlsFX
   - TilesFX
-  - Jfoenix
 * Scenebuilder _(optional)_
 * Jfoenix - https://search.maven.org/remotecontent?filepath=com/jfoenix/jfoenix/9.0.10/jfoenix-9.0.10.jar
 * Mysql Connector - https://dev.mysql.com/downloads/file/?id=525082
@@ -23,7 +22,8 @@ within the application.
 ## Application Setup
 **Note:** The application were not tested to run on other environments, except the **Intellij Ultimate Edition**.
 1. Download and install all dependencies and IDE in the requirements section, as they are needed in order to properly run the application.
-2. There are two methods to import the source code:
+   - Installing IntelliJ Ultimate Edition would include the latest version of JavaFX and its components.
+3. There are two methods to import the source code:
    - **Using Git** (Method 1):
        * Open intelliJ ultimate edition, on the 'projects' tab, click the '**Get from VCS**' and paste this url _https://github.com/xinzhao2627/barkadista.git_
        * Select your own directory and clone the repository.
@@ -32,11 +32,11 @@ within the application.
        * Download the source code at https://github.com/xinzhao2627/barkadista
        * Extract the project folder into your chosen directory
        * Open IntelliJ and on the 'projects' tab, click 'open' and select the directory of the source code.
-3. Import the Mysql Connector and Jfoenix:
+4. Import the Mysql Connector and Jfoenix:
    - Open the project in IntelliJ, in the upper left corner go to files > project structure > modules > barkadista. Below the 'module SDK', click the plus button > JAR or Directories
    - browse through the directories of the installed jar file then click ok.
    - toggle the both the imported mysql and jfoenix JAR file and click 'apply'.
-4. Open XAMPP and import the database:
+5. Open XAMPP and import the database:
    - Open XAMPP control panel, start 'Apache' and 'MySQL'.
    - go to http://localhost/phpmyadmin/ and click the 'new' button to create a database
    - Name the database 'barkadista_db'.
