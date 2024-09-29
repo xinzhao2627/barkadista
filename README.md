@@ -33,10 +33,12 @@ within the application.
        * Extract the project folder into your chosen directory
        * Open IntelliJ and on the 'projects' tab, click 'open' and select the directory of the source code.
 4. Import the Mysql Connector and Jfoenix:
-   - Open the project in IntelliJ, in the upper left corner go to files > project structure > modules > barkadista. Below the 'module SDK', click the plus button > JAR or Directories
-   - browse through the directories of the installed jar file then click ok.
-   - toggle the both the imported mysql and jfoenix JAR file and click 'apply'.
-5. Open XAMPP and import the database:
+   - first, extract the mysql connector in your desired folder, then remember the directory of its JAR file.
+   - also keep the JAR file of the Jfoenix.
+   - Open the project in IntelliJ, in the upper left corner go to files > project structure > modules > barkadista > dependency. Below the 'module SDK', click the plus button > JAR or Directories
+   - browse through the directories of the installed jar files then click ok.
+   - check the toggle for both the imported mysql and jfoenix JAR file and click 'apply'.
+6. Open XAMPP and import the database:
    - Open XAMPP control panel, start 'Apache' and 'MySQL'.
    - go to http://localhost/phpmyadmin/ and click the 'new' button to create a database
    - Name the database 'barkadista_db'.
