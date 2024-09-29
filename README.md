@@ -8,8 +8,8 @@ a student or an administrator may use the app to file a complain on specific com
 within the application.
 
 ## Requirements / Dependencies
-* XAMPP 5.5.35
-* IntelliJ Ultimate Edition
+* XAMPP 5.5.35 (or later versions)
+* IntelliJ Ultimate Edition 2023.0.2 (or later versions)
 * Scenebuilder _(optional, for development purposes)_
 * Jfoenix - https://search.maven.org/remotecontent?filepath=com/jfoenix/jfoenix/9.0.10/jfoenix-9.0.10.jar
 * Mysql Connector - https://dev.mysql.com/downloads/file/?id=525082
